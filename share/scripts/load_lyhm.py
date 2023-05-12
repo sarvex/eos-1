@@ -34,6 +34,4 @@ def load_lyhm(matlab_model_path):
     # Construct and return the LYHM as eos MorphableModel:
     shape_model = eos.morphablemodel.PcaModel(shape_mean, shape_orthonormal_pca_basis, shape_pca_eigenvalues, triangle_list)
     color_model = eos.morphablemodel.PcaModel(color_mean, color_orthonormal_pca_basis, color_pca_eigenvalues, triangle_list)
-    model = eos.morphablemodel.MorphableModel(shape_model, color_model)
-
-    return model
+    return eos.morphablemodel.MorphableModel(shape_model, color_model)
